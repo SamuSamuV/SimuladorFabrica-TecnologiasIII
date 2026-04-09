@@ -39,4 +39,7 @@ protected:
 
 	UFUNCTION()
 	void OnLineStateChanged(int32 LineID, float Efficiency, float Resources, EProductionState NewState);
+
+	UFUNCTION()
+	void HandleEmergencyRestart(int32 LineIDToRestart);
 };

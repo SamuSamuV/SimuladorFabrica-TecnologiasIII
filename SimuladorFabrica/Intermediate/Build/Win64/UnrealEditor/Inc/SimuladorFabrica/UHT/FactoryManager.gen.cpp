@@ -20,6 +20,48 @@ SIMULADORFABRICA_API UEnum* Z_Construct_UEnum_SimuladorFabrica_EProductionState(
 UPackage* Z_Construct_UPackage__Script_SimuladorFabrica();
 // End Cross Module References
 
+// Begin Class AFactoryManager Function HandleEmergencyRestart
+struct Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics
+{
+	struct FactoryManager_eventHandleEmergencyRestart_Parms
+	{
+		int32 LineIDToRestart;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/FactoryManager.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_LineIDToRestart;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics::NewProp_LineIDToRestart = { "LineIDToRestart", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FactoryManager_eventHandleEmergencyRestart_Parms, LineIDToRestart), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics::NewProp_LineIDToRestart,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFactoryManager, nullptr, "HandleEmergencyRestart", nullptr, nullptr, Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics::PropPointers), sizeof(Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics::FactoryManager_eventHandleEmergencyRestart_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics::Function_MetaDataParams), Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics::FactoryManager_eventHandleEmergencyRestart_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AFactoryManager::execHandleEmergencyRestart)
+{
+	P_GET_PROPERTY(FIntProperty,Z_Param_LineIDToRestart);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleEmergencyRestart(Z_Param_LineIDToRestart);
+	P_NATIVE_END;
+}
+// End Class AFactoryManager Function HandleEmergencyRestart
+
 // Begin Class AFactoryManager Function OnLineStateChanged
 struct Z_Construct_UFunction_AFactoryManager_OnLineStateChanged_Statics
 {
@@ -47,7 +89,7 @@ const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AFactoryManage
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AFactoryManager_OnLineStateChanged_Statics::NewProp_Efficiency = { "Efficiency", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FactoryManager_eventOnLineStateChanged_Parms, Efficiency), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AFactoryManager_OnLineStateChanged_Statics::NewProp_Resources = { "Resources", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FactoryManager_eventOnLineStateChanged_Parms, Resources), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_AFactoryManager_OnLineStateChanged_Statics::NewProp_NewState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_AFactoryManager_OnLineStateChanged_Statics::NewProp_NewState = { "NewState", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FactoryManager_eventOnLineStateChanged_Parms, NewState), Z_Construct_UEnum_SimuladorFabrica_EProductionState, METADATA_PARAMS(0, nullptr) }; // 539001135
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_AFactoryManager_OnLineStateChanged_Statics::NewProp_NewState = { "NewState", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FactoryManager_eventOnLineStateChanged_Parms, NewState), Z_Construct_UEnum_SimuladorFabrica_EProductionState, METADATA_PARAMS(0, nullptr) }; // 1335612371
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AFactoryManager_OnLineStateChanged_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFactoryManager_OnLineStateChanged_Statics::NewProp_LineID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFactoryManager_OnLineStateChanged_Statics::NewProp_Efficiency,
@@ -85,6 +127,7 @@ void AFactoryManager::StaticRegisterNativesAFactoryManager()
 {
 	UClass* Class = AFactoryManager::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleEmergencyRestart", &AFactoryManager::execHandleEmergencyRestart },
 		{ "OnLineStateChanged", &AFactoryManager::execOnLineStateChanged },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -142,7 +185,8 @@ struct Z_Construct_UClass_AFactoryManager_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AFactoryManager_OnLineStateChanged, "OnLineStateChanged" }, // 1123262800
+		{ &Z_Construct_UFunction_AFactoryManager_HandleEmergencyRestart, "HandleEmergencyRestart" }, // 3918259706
+		{ &Z_Construct_UFunction_AFactoryManager_OnLineStateChanged, "OnLineStateChanged" }, // 1964161965
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -203,10 +247,10 @@ AFactoryManager::~AFactoryManager() {}
 struct Z_CompiledInDeferFile_FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_FactoryManager_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AFactoryManager, AFactoryManager::StaticClass, TEXT("AFactoryManager"), &Z_Registration_Info_UClass_AFactoryManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AFactoryManager), 3390579039U) },
+		{ Z_Construct_UClass_AFactoryManager, AFactoryManager::StaticClass, TEXT("AFactoryManager"), &Z_Registration_Info_UClass_AFactoryManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AFactoryManager), 3667738769U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_FactoryManager_h_2216034000(TEXT("/Script/SimuladorFabrica"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_FactoryManager_h_2094911787(TEXT("/Script/SimuladorFabrica"),
 	Z_CompiledInDeferFile_FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_FactoryManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_FactoryManager_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

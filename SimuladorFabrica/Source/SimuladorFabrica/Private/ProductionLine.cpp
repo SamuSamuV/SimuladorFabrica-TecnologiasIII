@@ -35,21 +35,21 @@ void AProductionLine::StartSimulation()
 		{
 			while (bIsRunning)
 			{
-				// 1. Esperamos 1 segundo
+				// Esperamos 1 segundo
 				FPlatformProcess::Sleep(1.0f);
 
-				// 2. Modificamos valores aleatoriamente
+				// Modificamos valores aleatoriamente
 				float EffChange = FMath::RandRange(-5.0f, 5.0f);
 				float ResChange = FMath::RandRange(-5.0f, 5.0f);
 
-				// 3. Limitamos entre 0 y 100
+				// Limitamos entre 0 y 100
 				Efficiency = FMath::Clamp(Efficiency + EffChange, 0.0f, 100.0f);
 				Resources = FMath::Clamp(Resources + ResChange, 0.0f, 100.0f);
 
-				// 4. Evaluamos el nuevo estado
+				// Evaluamos el nuevo estado
 				CurrentState = EvaluateState(Efficiency, Resources);
 
-				// 5. Enviamos la notificación de vuelta al Hilo Principal
+				// Enviamos la notificación de vuelta al Hilo Principal
 				Async(EAsyncExecution::TaskGraphMainThread, [this, CapturedEff = Efficiency, CapturedRes = Resources, CapturedState = CurrentState]()
 					{
 						if (IsValid(this))
@@ -75,4 +75,14 @@ EProductionState AProductionLine::EvaluateState(float InEfficiency, float InReso
 	{
 		return EProductionState::Warning;
 	}
+}
+
+void AProductionLine::ResetLine()
+{
+	// Restauramos los valores a 80 como pide el documento
+	Efficiency = 80.0f;
+	Resources = 80.0f;
+
+	// Dejamos constancia en el Log interno de Unreal
+	UE_LOG(LogTemp, Warning, TEXT("Intervención del usuario: Línea %d restablecida a estado Operativo (80/80)."), LineID);
 }

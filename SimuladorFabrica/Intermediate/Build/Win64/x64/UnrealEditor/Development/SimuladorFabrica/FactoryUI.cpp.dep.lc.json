@@ -49,7 +49,18 @@
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\textblock.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\textwidgettypes.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textwidgettypes.generated.h",
-            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textblock.generated.h"
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textblock.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\button.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\contentwidget.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\panelwidget.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\panelslot.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\panelslot.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\panelwidget.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\contentwidget.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\button.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\canvaspanel.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\slate\\public\\widgets\\layout\\sconstraintcanvas.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\canvaspanel.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -37,17 +37,11 @@ struct Z_Construct_UEnum_SimuladorFabrica_EProductionState_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// --- ENUMERADOR DE ESTADOS ---\n" },
-#endif
 		{ "Critical.DisplayName", "Critical" },
 		{ "Critical.Name", "EProductionState::Critical" },
 		{ "ModuleRelativePath", "Public/ProductionLine.h" },
 		{ "Operational.DisplayName", "Operational" },
 		{ "Operational.Name", "EProductionState::Operational" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "--- ENUMERADOR DE ESTADOS ---" },
-#endif
 		{ "Warning.DisplayName", "Warning" },
 		{ "Warning.Name", "EProductionState::Warning" },
 	};
@@ -93,13 +87,7 @@ struct Z_Construct_UDelegateFunction_SimuladorFabrica_OnProductionStateChanged__
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// --- DELEGADO MULTICAST ---\n" },
-#endif
 		{ "ModuleRelativePath", "Public/ProductionLine.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "--- DELEGADO MULTICAST ---" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_LineID;
@@ -114,7 +102,7 @@ const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_Simula
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UDelegateFunction_SimuladorFabrica_OnProductionStateChanged__DelegateSignature_Statics::NewProp_Efficiency = { "Efficiency", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SimuladorFabrica_eventOnProductionStateChanged_Parms, Efficiency), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UDelegateFunction_SimuladorFabrica_OnProductionStateChanged__DelegateSignature_Statics::NewProp_Resources = { "Resources", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SimuladorFabrica_eventOnProductionStateChanged_Parms, Resources), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UDelegateFunction_SimuladorFabrica_OnProductionStateChanged__DelegateSignature_Statics::NewProp_NewState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UDelegateFunction_SimuladorFabrica_OnProductionStateChanged__DelegateSignature_Statics::NewProp_NewState = { "NewState", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SimuladorFabrica_eventOnProductionStateChanged_Parms, NewState), Z_Construct_UEnum_SimuladorFabrica_EProductionState, METADATA_PARAMS(0, nullptr) }; // 539001135
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UDelegateFunction_SimuladorFabrica_OnProductionStateChanged__DelegateSignature_Statics::NewProp_NewState = { "NewState", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_SimuladorFabrica_eventOnProductionStateChanged_Parms, NewState), Z_Construct_UEnum_SimuladorFabrica_EProductionState, METADATA_PARAMS(0, nullptr) }; // 1335612371
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_SimuladorFabrica_OnProductionStateChanged__DelegateSignature_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_SimuladorFabrica_OnProductionStateChanged__DelegateSignature_Statics::NewProp_LineID,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_SimuladorFabrica_OnProductionStateChanged__DelegateSignature_Statics::NewProp_Efficiency,
@@ -170,13 +158,7 @@ struct Z_Construct_UClass_AProductionLine_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnStateChanged_MetaData[] = {
 		{ "Category", "Events" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// El altavoz que avisa a otros de los cambios\n" },
-#endif
 		{ "ModuleRelativePath", "Public/ProductionLine.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "El altavoz que avisa a otros de los cambios" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LineID_MetaData[] = {
 		{ "Category", "Production" },
@@ -198,7 +180,7 @@ struct Z_Construct_UClass_AProductionLine_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AProductionLine_Statics::NewProp_OnStateChanged = { "OnStateChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AProductionLine, OnStateChanged), Z_Construct_UDelegateFunction_SimuladorFabrica_OnProductionStateChanged__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnStateChanged_MetaData), NewProp_OnStateChanged_MetaData) }; // 2513740592
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AProductionLine_Statics::NewProp_OnStateChanged = { "OnStateChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AProductionLine, OnStateChanged), Z_Construct_UDelegateFunction_SimuladorFabrica_OnProductionStateChanged__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnStateChanged_MetaData), NewProp_OnStateChanged_MetaData) }; // 172611873
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AProductionLine_Statics::NewProp_LineID = { "LineID", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AProductionLine, LineID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LineID_MetaData), NewProp_LineID_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AProductionLine_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AProductionLine_Statics::NewProp_OnStateChanged,
@@ -245,13 +227,13 @@ AProductionLine::~AProductionLine() {}
 struct Z_CompiledInDeferFile_FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_ProductionLine_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EProductionState_StaticEnum, TEXT("EProductionState"), &Z_Registration_Info_UEnum_EProductionState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 539001135U) },
+		{ EProductionState_StaticEnum, TEXT("EProductionState"), &Z_Registration_Info_UEnum_EProductionState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1335612371U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AProductionLine, AProductionLine::StaticClass, TEXT("AProductionLine"), &Z_Registration_Info_UClass_AProductionLine, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionLine), 3287729585U) },
+		{ Z_Construct_UClass_AProductionLine, AProductionLine::StaticClass, TEXT("AProductionLine"), &Z_Registration_Info_UClass_AProductionLine, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AProductionLine), 1795309307U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_ProductionLine_h_3918098271(TEXT("/Script/SimuladorFabrica"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_ProductionLine_h_385824516(TEXT("/Script/SimuladorFabrica"),
 	Z_CompiledInDeferFile_FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_ProductionLine_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_ProductionLine_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_ProductionLine_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_ProductionLine_h_Statics::EnumInfo));

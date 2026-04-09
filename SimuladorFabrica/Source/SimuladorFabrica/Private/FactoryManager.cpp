@@ -11,20 +11,34 @@ void AFactoryManager::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// Creamos la Interfaz si hemos asignado la clase en el editor
-	if (FactoryUIClass)
+	APlayerController* PC = GetWorld()->GetFirstPlayerController();
+
+	if (PC && FactoryUIClass)
 	{
-		FactoryUIInstance = CreateWidget<UFactoryUI>(GetWorld(), FactoryUIClass);
+		FactoryUIInstance = CreateWidget<UFactoryUI>(PC, FactoryUIClass);
 		if (FactoryUIInstance)
 		{
 			FactoryUIInstance->AddToViewport();
+
+			FactoryUIInstance->OnEmergencyRestart.AddDynamic(this, &AFactoryManager::HandleEmergencyRestart);
 		}
 	}
 
-	// Creamos las 3 líneas de producción
 	LineA = CreateProductionLine(1);
 	LineB = CreateProductionLine(2);
 	LineC = CreateProductionLine(3);
+}
+
+void AFactoryManager::HandleEmergencyRestart(int32 LineIDToRestart)
+{
+	if (LineIDToRestart == 1 && LineA) LineA->ResetLine();
+	else if (LineIDToRestart == 2 && LineB) LineB->ResetLine();
+	else if (LineIDToRestart == 3 && LineC) LineC->ResetLine();
+
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Cyan, FString::Printf(TEXT("¡LÍNEA %d SALVADA POR EL USUARIO!"), LineIDToRestart));
+	}
 }
 
 AProductionLine* AFactoryManager::CreateProductionLine(int32 InLineID)
@@ -36,11 +50,8 @@ AProductionLine* AFactoryManager::CreateProductionLine(int32 InLineID)
 
 	if (NewLine)
 	{
-		// Nos suscribimos al delegado
 		NewLine->OnStateChanged.AddDynamic(this, &AFactoryManager::OnLineStateChanged);
 
-		// Un pequeño truco rápido para forzar el ID por código si hace falta:
-		// *(En un proyecto real, usaríamos un Setter)*
 		FProperty* LineIDProp = NewLine->GetClass()->FindPropertyByName(FName("LineID"));
 		if (LineIDProp)
 		{
@@ -54,7 +65,6 @@ AProductionLine* AFactoryManager::CreateProductionLine(int32 InLineID)
 
 void AFactoryManager::OnLineStateChanged(int32 LineID, float Efficiency, float Resources, EProductionState NewState)
 {
-	// Mandamos los datos actualizados a la interfaz
 	if (FactoryUIInstance)
 	{
 		FactoryUIInstance->UpdateLineUI(LineID, Efficiency, Resources, NewState);

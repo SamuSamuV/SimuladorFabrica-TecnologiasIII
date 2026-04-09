@@ -5,7 +5,6 @@
 #include <atomic>
 #include "ProductionLine.generated.h"
 
-// --- ENUMERADOR DE ESTADOS ---
 UENUM(BlueprintType)
 enum class EProductionState : uint8
 {
@@ -14,7 +13,6 @@ enum class EProductionState : uint8
 	Critical	UMETA(DisplayName = "Critical")
 };
 
-// --- DELEGADO MULTICAST ---
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams(FOnProductionStateChanged, int32, LineID, float, Efficiency, float, Resources, EProductionState, NewState);
 
 
@@ -26,9 +24,10 @@ class SIMULADORFABRICA_API AProductionLine : public AActor
 public:
 	AProductionLine();
 
-	// El altavoz que avisa a otros de los cambios
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FOnProductionStateChanged OnStateChanged;
+
+	void ResetLine();
 
 protected:
 	virtual void BeginPlay() override;

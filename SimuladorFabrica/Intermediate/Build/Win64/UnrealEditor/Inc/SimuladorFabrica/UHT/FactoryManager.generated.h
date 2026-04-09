@@ -16,6 +16,7 @@ enum class EProductionState : uint8;
 #define SIMULADORFABRICA_FactoryManager_generated_h
 
 #define FID_Users_Alumno_Documents_GitHub_SimuladorFabrica_TecnologiasIII_SimuladorFabrica_Source_SimuladorFabrica_Public_FactoryManager_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execHandleEmergencyRestart); \
 	DECLARE_FUNCTION(execOnLineStateChanged);
 
 

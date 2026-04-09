@@ -7,6 +7,10 @@
 
 class UProgressBar;
 class UTextBlock;
+class UButton;
+class UCanvasPanel;
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnEmergencyRestart, int32, LineIDToRestart);
 
 UCLASS()
 class SIMULADORFABRICA_API UFactoryUI : public UUserWidget
@@ -14,37 +18,48 @@ class SIMULADORFABRICA_API UFactoryUI : public UUserWidget
 	GENERATED_BODY()
 
 public:
-	// Función para actualizar las barras y textos
+	// Función principal para actualizar las barras y textos
 	void UpdateLineUI(int32 LineID, float Efficiency, float Resources, EProductionState State);
 
+	// El altavoz de la UI para el Gestor Central
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnEmergencyRestart OnEmergencyRestart;
+
 protected:
-	// --- LÍNEA A (ID 1) ---
-	UPROPERTY(meta = (BindWidget))
-	UProgressBar* Bar_Eff_A;
+	virtual void NativeConstruct() override;
 
 	UPROPERTY(meta = (BindWidget))
-	UProgressBar* Bar_Res_A;
+	UCanvasPanel* Panel_Emergency;
 
 	UPROPERTY(meta = (BindWidget))
-	UTextBlock* Text_State_A;
-
-	// --- LÍNEA B (ID 2) ---
-	UPROPERTY(meta = (BindWidget))
-	UProgressBar* Bar_Eff_B;
+	UTextBlock* Text_EmergencyDesc;
 
 	UPROPERTY(meta = (BindWidget))
-	UProgressBar* Bar_Res_B;
+	UButton* Btn_Restart;
 
-	UPROPERTY(meta = (BindWidget))
-	UTextBlock* Text_State_B;
+	void ShowEmergencyPanel(int32 CriticalLineID);
+	void HideEmergencyPanel();
 
-	// --- LÍNEA C (ID 3) ---
-	UPROPERTY(meta = (BindWidget))
-	UProgressBar* Bar_Eff_C;
+	UFUNCTION()
+	void OnRestartButtonClicked();
 
-	UPROPERTY(meta = (BindWidget))
-	UProgressBar* Bar_Res_C;
+	void OnEmergencyTimeout();
 
-	UPROPERTY(meta = (BindWidget))
-	UTextBlock* Text_State_C;
+	// Variables de control del minijuego
+	FTimerHandle EmergencyTimerHandle;
+	int32 CurrentCriticalLine;
+	bool bIsEmergencyActive = false;
+
+
+	UPROPERTY(meta = (BindWidget)) UProgressBar* Bar_Eff_A;
+	UPROPERTY(meta = (BindWidget)) UProgressBar* Bar_Res_A;
+	UPROPERTY(meta = (BindWidget)) UTextBlock* Text_State_A;
+
+	UPROPERTY(meta = (BindWidget)) UProgressBar* Bar_Eff_B;
+	UPROPERTY(meta = (BindWidget)) UProgressBar* Bar_Res_B;
+	UPROPERTY(meta = (BindWidget)) UTextBlock* Text_State_B;
+
+	UPROPERTY(meta = (BindWidget)) UProgressBar* Bar_Eff_C;
+	UPROPERTY(meta = (BindWidget)) UProgressBar* Bar_Res_C;
+	UPROPERTY(meta = (BindWidget)) UTextBlock* Text_State_C;
 };
