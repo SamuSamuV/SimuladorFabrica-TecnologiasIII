@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\Alumno\\Documents\\GitHub\\SimuladorFabrica-TecnologiasIII\\SimuladorFabrica\\Source\\SimuladorFabrica\\SimuladorFabrica.Build.cs",
+		"C:\\Users\\Alumno\\Documents\\GitHub\\SimuladorFabrica-TecnologiasIII\\SimuladorFabrica\\Source\\SimuladorFabrica.Target.cs",
+		"C:\\Users\\Alumno\\Documents\\GitHub\\SimuladorFabrica-TecnologiasIII\\SimuladorFabrica\\Source\\SimuladorFabricaEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}

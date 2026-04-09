@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\alumno\\documents\\github\\simuladorfabrica-tecnologiasiii\\simuladorfabrica\\intermediate\\build\\win64\\unrealeditor\\inc\\simuladorfabrica\\uht\\simuladorfabrica.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\alumno\\documents\\github\\simuladorfabrica-tecnologiasiii\\simuladorfabrica\\intermediate\\build\\win64\\x64\\simuladorfabricaeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\alumno\\documents\\github\\simuladorfabrica-tecnologiasiii\\simuladorfabrica\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\simuladorfabrica\\definitions.simuladorfabrica.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

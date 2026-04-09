@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SimuladorFabrica.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SimuladorFabrica.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SimuladorFabricaEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\SimuladorFabrica">
+      <UniqueIdentifier>{7211A9D9-E01C-368A-9A55-A694AEF2F84F}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SimuladorFabrica\SimuladorFabrica.Build.cs">
+      <Filter>Source\SimuladorFabrica</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SimuladorFabrica\SimuladorFabrica.cpp">
+      <Filter>Source\SimuladorFabrica</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SimuladorFabrica\SimuladorFabrica.h">
+      <Filter>Source\SimuladorFabrica</Filter>
+    </ClCompile>
+    <Filter Include="Source\SimuladorFabrica\Private">
+      <UniqueIdentifier>{02ADAA17-E7AF-3F8E-AF6A-A7C29BD3E34B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SimuladorFabrica\Private\FactoryManager.cpp">
+      <Filter>Source\SimuladorFabrica\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SimuladorFabrica\Private\FactoryUI.cpp">
+      <Filter>Source\SimuladorFabrica\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SimuladorFabrica\Private\ProductionLine.cpp">
+      <Filter>Source\SimuladorFabrica\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\SimuladorFabrica\Public">
+      <UniqueIdentifier>{EB4D1BC3-CD19-33FC-9ADF-DEBE0A310129}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SimuladorFabrica\Public\FactoryManager.h">
+      <Filter>Source\SimuladorFabrica\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SimuladorFabrica\Public\FactoryUI.h">
+      <Filter>Source\SimuladorFabrica\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SimuladorFabrica\Public\ProductionLine.h">
+      <Filter>Source\SimuladorFabrica\Public</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
